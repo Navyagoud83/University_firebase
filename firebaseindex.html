@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+            display: flex;
+        }
+        .hero {
+            background-color: #FFD700;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero img {
+            width: 200px;
+            height: 30px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .logo {
+            height: 45px;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+    </style>
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html"> Course</a></li>
+                <li><a href="About Us.html">About Us</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+               <h1>Welcome to University</h1>
+            </div>
+    <body>
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your name" required><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Your email" required><br>
+            
+            <label for="phone">Phone:</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number" required><br>
+            
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" placeholder="Your message" required></textarea><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    
+        <!-- Firebase JS SDKs -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+        
+        <!-- Firebase configuration and initialization -->
+        <script>
+            // Add your Firebase configuration details here
+           const firebaseConfig = {
+    apiKey: "AIzaSyCOcvOtFnf7sbcwgrFJhiXwtQI8Vw1lWQo",
+    authDomain: "navya-manga-university.firebaseapp.com",
+    databaseURL: "https://navya-manga-university-default-rtdb.firebaseio.com",
+    projectId: "navya-manga-university",
+    storageBucket: "navya-manga-university.appspot.com",
+    messagingSenderId: "986042287534",
+    appId: "1:986042287534:web:d98d82d37592f6c408343f"
+  };
+    
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+    
+            // Reference to the Firebase database path
+            const UniversityDB = firebase.database().ref('');
+        </script>
+    
+        <script src="scripts.js"></script>
+    </body>
+    <footer>
+        <p>&copy; 2024 University. All rights reserved.</p>
+    </footer>
+</body>
+</html>
